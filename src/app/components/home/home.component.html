@@ -1,0 +1,68 @@
+<!-- 提供背景色調整與自動滿版，由主要內容往下編輯 -->
+<div class="bg-warning-subtle flex-grow-1 d-flex flex-column">
+  <app-breadcrumb *ngIf="!isHome"></app-breadcrumb>
+  <!-- 主要內容 -->
+  <div class="d-flex flex-column w-100 flex-grow-1 justify-content-center align-items-center">
+    <!-- 使用者資訊 -->
+    <ng-container *ngIf="userData">
+      123
+    </ng-container>
+    <div class="w-75 bg-white border border-2 shadow shadow-sm p-2 rounded rounded-2 mt-4">
+      <div class="fw-bold fs-5">訪客<span class="ms-2 px-2 py-1 bg-primary-subtle fw-normal fs-6 rounded">Guest</span></div>
+      <div class="w-100 d-flex justify-content-center my-2"><div class="bg-secondary" style="width: 100%; height: 2px;"></div></div>
+      <div>歡迎來到觀看列表!</div>
+    </div>
+    <!-- 觀看列表 -->
+    <div class="mt-4 d-flex flex-column w-75 p-2 border border-4 rounded-2 bg-secondary-subtle mb-4">
+      <!-- TODO For 處理 -->
+      <div class="d-flex my-2">
+        <!-- <img src="..." class="img-thumbnail" alt="..."> -->
+        <div class="border border-white border-2 rounded rounded-2 d-flex justify-content-center align-items-center text-white"
+             style="width: 75px; height: 75px; background: #868e96;">
+          75x75
+        </div>
+        <div class="ms-2 border-start ps-2">
+          <div class="fw-bold fs-5">標題</div>
+          <div class="text-muted">描述</div>
+        </div>
+      </div>
+      <div class="bg-white w-100" style="height: 2px"></div>
+      <div class="d-flex my-2">
+        <!-- <img src="..." class="img-thumbnail" alt="..."> -->
+        <div class="border border-white border-2 rounded rounded-2 d-flex justify-content-center align-items-center text-white"
+             style="width: 75px; height: 75px; background: #868e96;">
+          75x75
+        </div>
+        <div class="ms-2 border-start ps-2">
+          <div class="fw-bold fs-5">標題</div>
+          <div class="text-muted">描述</div>
+        </div>
+      </div>
+      <div class="bg-white w-100" style="height: 2px"></div>
+      <div class="d-flex my-2">
+        <!-- <img src="..." class="img-thumbnail" alt="..."> -->
+        <div class="border border-white border-2 rounded rounded-2 d-flex justify-content-center align-items-center text-white"
+             style="width: 75px; height: 75px; background: #868e96;">75x75
+        </div>
+        <div class="ms-2 border-start ps-2">
+          <div class="fw-bold fs-5">標題</div>
+          <div class="text-muted">描述</div>
+        </div>
+      </div>
+      <div class="bg-black w-100" style="height: 1px"></div>
+      <nav class="mt-2">
+        <ul class="pagination justify-content-center justify-content-md-end">
+<!--          <li class="page-item disabled">-->
+<!--            <a class="page-link"> Prev </a>-->
+<!--          </li>-->
+          <li class="page-item"><a class="page-link" href="#">1</a></li>
+          <li class="page-item"><a class="page-link" href="#">2</a></li>
+          <li class="page-item"><a class="page-link">...</a></li>
+          <li class="page-item">
+            <a class="page-link" href="#"> Next </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,12 @@
+<ngx-spinner bdColor = "rgba(0, 0, 0, 0.8)" size="medium" color="#fff" type="square-jelly-box" [fullScreen]="true">
+  <p style="color: white" > 載入中 </p>
+</ngx-spinner>
+<div class="mx-auto h-100" style="max-width: 1440px">
+  <app-header></app-header>
+  <main class="d-flex flex-column" style="min-height: 100%">
+    <!-- 保留 Navbar 高度 -->
+    <div style="padding-top: 108px"></div>
+    <router-outlet />
+    <app-footer class="bg-secondary-subtle mt-auto"></app-footer>
+  </main>
+</div>

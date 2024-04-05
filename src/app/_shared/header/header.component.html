@@ -1,0 +1,46 @@
+<header class="fixed-top custom-header">
+  <div class="d-flex justify-content-end p-2 bg-secondary" style="height: 52px">
+    <ng-container *ngIf="apiServerStatus; else apiServerWarringRender">
+      <div class="p-1 col-3 col-md-2 col-xl-1" placement="bottom" ngbTooltip="API 運作正常">
+        <span class="badge rounded-pill custom-success w-100 text-black fw-bolder">API Server</span>
+      </div>
+    </ng-container>
+    <ng-container *ngIf="dbServerStatus; else dbServerWarringRender">
+      <div class="p-1 col-3 col-md-2 col-xl-1" placement="bottom" ngbTooltip="DB 運作正常">
+        <span class="badge rounded-pill custom-success w-100 text-black fw-bolder">DB Server</span>
+      </div>
+    </ng-container>
+  </div>
+  <div class="bg-secondary-subtle">
+    <nav class="navbar navbar-light d-flex justify-content-between">
+      <span class="flex-grow-1 d-none d-md-flex justify-content-end px-2">
+        <span style="width: 58px;"></span>
+      </span>
+      <a class="navbar-brand text-center" style="width: 120px" href="javascript:void(0);" routerLink="home">Watchlist</a>
+      <span class="flex-grow-1 d-flex justify-content-end px-2">
+        <ng-container *ngIf="!isLogin; else logoutRender">
+          <a class="btn btn-primary" href="javascript:void(0);" routerLink="login">登入</a>
+        </ng-container>
+      </span>
+    </nav>
+  </div>
+</header>
+
+<!-- 伺服器狀態異常渲染 -->
+<ng-template #apiServerWarringRender>
+  <div class="p-1 col-3 col-md-2 col-xl-1" placement="bottom" ngbTooltip="API 發生異常">
+    <span class="badge rounded-pill custom-warning w-100 text-black fw-bolder">API Server</span>
+  </div>
+</ng-template>
+
+<ng-template #dbServerWarringRender>
+  <div class="p-1 col-3 col-md-2 col-xl-1" placement="bottom" ngbTooltip="DB 發生異常">
+    <span class="badge rounded-pill custom-warning w-100 text-black fw-bolder">DB Server</span>
+  </div>
+</ng-template>
+
+<!-- Navbar 登出按鈕渲染 -->
+<ng-template #logoutRender>
+  <button class="btn btn-danger" type="button">登出</button>
+</ng-template>
+

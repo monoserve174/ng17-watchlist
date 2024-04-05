@@ -1,0 +1,11 @@
+<!-- 分頁資訊 -->
+<div id="breadcrumb" class="flex-grow-0" style="--bs-breadcrumb-divider: '>';">
+  <nav class="w-100 d-flex justify-content-end p-2">
+    <ol class="breadcrumb">
+      <li *ngFor="let curPart of breadcrumbList" class="breadcrumb-item">
+        <span class="text-decoration-none">{{ curPart }}</span>
+        <!-- <a class="text-decoration-none" href="javascript:void(0);">{{ curPart }}</a> -->
+      </li>
+    </ol>
+  </nav>
+</div>
